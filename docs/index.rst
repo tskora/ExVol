@@ -4,6 +4,8 @@ ExVol
     *All great physicists, all of them, were masters of statistical mechanics. It may not have been the sexiest thing in the world, but they were all masters of it. (...) In a sense my life is consisted of learning and forgetting, and learning and forgetting, and learning and forgetting statistical mechanics.*
     - `Leonard Susskind <https://theoreticalminimum.com/courses/statistical-mechanics/2013/spring/lecture-1>`_
 
+`Github repository <https://github.com/tskora/ExVol>`_
+
 .. warning::
     Work in progress, copy-pasted for now.
 
