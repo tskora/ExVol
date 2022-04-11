@@ -6,6 +6,6 @@ ExVol
 Author
 --------
 
-The following people contributed to the development of ``pyBrown``.
+The following people contributed to the development of ``ExVol``.
 
 - Tomasz SkĂłra -- **creator, lead developer** (contact: tskora@ichf.edu.pl)
