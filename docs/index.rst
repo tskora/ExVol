@@ -38,7 +38,7 @@ To ensure that all ``python`` packages needed by ``ExVol`` are present on your c
 
     $ pip3 install -r requirements.txt
 
-If you want to run unit tests, go to a project directory ``src/bdsim/tests/`` and type:
+If you want to run unit tests, go to a project directory ``tests/`` and type:
 
 .. code-block:: console
 
@@ -46,6 +46,12 @@ If you want to run unit tests, go to a project directory ``src/bdsim/tests/`` an
 
 .. warning::
     The work on ``ExVol`` is still in progress. Some functionalities may be temporally unavailable.
+
+.. rubric:: Author
+
+The following people contributed to the development of ``pyBrown``.
+
+- Tomasz Skóra -- **creator, lead developer** (contact: tskora@ichf.edu.pl)
 
 .. toctree::
    :maxdepth: 2
