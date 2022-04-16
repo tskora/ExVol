@@ -7,32 +7,13 @@ ExVol
 `Github repository <https://github.com/tskora/ExVol>`_
 
 .. warning::
-    Work in progress, copy-pasted for now.
+    Work in progress.
 
 .. rubric:: Overview
 
-``ExVol`` is a Brownian and Stokesian dynamics package and simulation tool. It is written in ``python 3``.
+``ExVol`` is a Monte Carlo code performing insertions of a bead model into the box filled with other, crowding, bead models, in order to calculate the change in configurational partition function. It is written in ``python 3``.
 
 .. rubric:: Quickstart
-
-To configure, type the following command in the command line:
-
-.. code-block:: console
-
-    $ ./configure --prefix=DIR
-
-where ``DIR`` is the installation directory (``/usr/local/`` by default).
-
-Then to install proceed with:
-
-.. code-block:: console
-
-    $ make
-    $ make install
-
-.. You can check :ref:`installation` for more details.
-
-You can check ... for more details.
 
 To ensure that all ``python`` packages needed by ``ExVol`` are present on your computer you can run
 
@@ -40,14 +21,22 @@ To ensure that all ``python`` packages needed by ``ExVol`` are present on your c
 
     $ pip3 install -r requirements.txt
 
-If you want to run unit tests, go to a project directory ``tests/`` and type:
+.. rubric:: License
 
-.. code-block:: console
+Copyright (C) 2022 Tomasz Skóra tskora@ichf.edu.pl
 
-    $ make test
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-.. warning::
-    The work on ``ExVol`` is still in progress. Some functionalities may be temporally unavailable.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see `here <https://www.gnu.org/licenses/>`_.
 
 .. rubric:: Author
 
