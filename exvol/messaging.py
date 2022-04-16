@@ -1,19 +1,3 @@
-# pyBrown is a bundle of tools useful for Brownian and Stokesian dynamics
-# simulations. Copyright (C) 2018  Tomasz Skora (tskora@ichf.edu.pl)
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see https://www.gnu.org/licenses.
-
 import time
 
 #-------------------------------------------------------------------------------
@@ -23,3 +7,21 @@ def timestamp(message, *variables):
 	date = time.asctime( time.localtime(time.time()) )
 
 	print( '{}: '.format(date) + message.format(*variables) + '\n' )
+
+#-------------------------------------------------------------------------------
+
+def copyright_notice():
+
+	line1 = 'ExVol Copyright (C) 2022 Tomasz Skóra tskora@ichf.edu.pl'
+	line2 = 'This program comes with ABSOLUTELY NO WARRANTY;'
+	line3 = 'This is free software, and you are welcome to redistribute it'
+	line4 = 'under certain conditions; see https://www.gnu.org/licenses/ for details'
+	lines = [line1, line2, line3, line4]
+
+	n = max([len(line) for line in lines]) + 4
+
+	print( '#'*n )
+	[ print( '# ' + line + ' '*(n-len(line)-3) + '#' ) for line in lines ]
+	print( '#'*n )
+
+#-------------------------------------------------------------------------------

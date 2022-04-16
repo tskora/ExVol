@@ -2,7 +2,7 @@ import click
 
 from exvol.input import InputData, read_structure_filename
 from exvol.ex_vol import ensure_tracer_is_one_pbc_replica, estimate_excluded_volume
-from exvol.messaging import timestamp
+from exvol.messaging import copyright_notice, timestamp
 
 import multiprocessing
 from multiprocessing import Pool
@@ -47,4 +47,5 @@ def main(input_filename):
 
 if __name__ == '__main__':
 
+	copyright_notice()
 	main()
