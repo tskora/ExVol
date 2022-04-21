@@ -5,8 +5,6 @@ from exvol.messaging import timestamp
 
 #-------------------------------------------------------------------------------
 
-# radii = {'FIC': 51.0, 'TRC': 10.0}
-
 @click.command()
 @click.option('-i', '--input-xyz', 'input_xyz_filename',
 				required = True,
