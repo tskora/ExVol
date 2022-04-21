@@ -8,4 +8,4 @@ Author
 
 The following people contributed to the development of ``ExVol``.
 
-- Tomasz SkĂłra -- **creator, lead developer** (contact: tskora@ichf.edu.pl)
+- Tomasz Skóra -- **creator, lead developer** (contact: tskora@ichf.edu.pl)
