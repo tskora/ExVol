@@ -8,7 +8,7 @@ from exvol.sphere import Sphere
 #-------------------------------------------------------------------------------
 
 # here the list of keywords that are required for program to work is provided
-REQUIRED_KEYWORDS = ["box_size", "number_of_trials", "tracer_filename", "crowders_filename"]
+REQUIRED_KEYWORDS = ["box_size", "number_of_trials", "tracer_filename", "crowders_filename", "hook_bead_index"]
 
 # here the dict of keywords:default values is provided
 # if given keyword is absent in JSON, it is added with respective default value
