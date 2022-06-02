@@ -90,11 +90,13 @@ def estimate_excluded_volume(seed, tracer, crowders, number_of_trials, box_size,
 			t.translate(translation_vector)
 
 		# print(tracer)
-		# 1/0
+		# print()
 
 		if overlap_pbc( tracer, crowders, box_size ):
-
 			count += 1
+
+		for t in tracer:
+			t.translate(-translation_vector)
 
 	return count / number_of_trials
 
