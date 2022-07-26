@@ -62,7 +62,10 @@ def is_over_surface(tracer):
 
 	for t in tracer:
 		h = t.coords[-1]
-		if h < t.r: return False
+		# if h < t.r: return False
+		# NEW
+		if h < t.r and t.r-h > 0.0001: return False
+		# NEW
 
 	return True
 
@@ -80,11 +83,14 @@ def estimate_excluded_volume(seed, tracer, crowders, number_of_trials, box_size,
 		translation_vector = translation_vector * box_size - box_size / 2
 		translation_vector = np.array( list(translation_vector) + (3-dimension)*[0.0] )
 
+		# start NEW
+		# translation_vector[2] = pseudorandom_number_generator.rand()*(box_size/2 - 2*tracer[0].r)
+		# end NEW
+
 		# print(tracer)
 		# print(translation_vector)
-		# 1/0
 
-		assert is_over_surface(tracer)
+		# assert is_over_surface(tracer)
 		
 		for t in tracer:
 			t.translate(translation_vector)

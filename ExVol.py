@@ -28,7 +28,7 @@ def main(input_filename):
 
 	ensure_tracer_is_one_pbc_replica(tracer, i.input_data["box_size"])
 
-	pin_tracer_to_surface(tracer, i.input_data["box_size"], i.input_data["hook_bead_index"])
+	# pin_tracer_to_surface(tracer, i.input_data["box_size"], i.input_data["hook_bead_index"])
 
 	crowders = read_structure_filename(i.input_data["crowders_filename"])
 	
