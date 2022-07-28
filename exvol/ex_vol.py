@@ -37,6 +37,18 @@ def pin_tracer_to_surface(tracer, box_size, hook):
 
 #-------------------------------------------------------------------------------
 
+def does_tracer_fit(tracer, box_size):
+
+	for i in range(len(tracer)):
+
+		if tracer[i].coords[2] > box_size/2 - tracer[i].r or tracer[i].coords[2] < tracer[i].r:
+
+			return False
+
+	return True
+
+#-------------------------------------------------------------------------------
+
 def put_tracer_at_center(tracer):
 
 	gc = np.mean([t.coords for t in tracer], axis = 0)
@@ -78,25 +90,21 @@ def estimate_excluded_volume(seed, tracer, crowders, number_of_trials, box_size,
 
 	for i in tqdm( range(number_of_trials), disable = disable_progress_bar ):
 
-		translation_vector = pseudorandom_number_generator.rand(dimension)
+		while True:
 
-		translation_vector = translation_vector * box_size - box_size / 2
-		translation_vector = np.array( list(translation_vector) + (3-dimension)*[0.0] )
+			translation_vector = pseudorandom_number_generator.rand(3)
 
-		# start NEW
-		# translation_vector[2] = pseudorandom_number_generator.rand()*(box_size/2 - 2*tracer[0].r)
-		# end NEW
+			translation_vector = translation_vector * box_size - box_size / 2
+			translation_vector[3] = np.abs( translation_vector[3] )
 
-		# print(tracer)
-		# print(translation_vector)
+			for t in tracer:
+				t.translate(translation_vector)
 
-		# assert is_over_surface(tracer)
-		
-		for t in tracer:
-			t.translate(translation_vector)
-
-		# print(tracer)
-		# print()
+			if does_tracer_fit(tracer, box_size):
+				break
+			else:
+				for t in tracer:
+					t.translate(-translation_vector)				
 
 		if overlap_pbc( tracer, crowders, box_size ):
 			count += 1
