@@ -88,6 +88,8 @@ def estimate_excluded_volume(seed, tracer, crowders, number_of_trials, box_size,
 	
 	count = 0
 
+	put_tracer_at_center(tracer)
+
 	for i in tqdm( range(number_of_trials), disable = disable_progress_bar ):
 
 		while True:
