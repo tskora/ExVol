@@ -97,7 +97,7 @@ def estimate_excluded_volume(seed, tracer, crowders, number_of_trials, box_size,
 			translation_vector = pseudorandom_number_generator.rand(3)
 
 			translation_vector = translation_vector * box_size - box_size / 2
-			translation_vector[3] = np.abs( translation_vector[3] )
+			translation_vector[2] = np.abs( translation_vector[2] )
 
 			for t in tracer:
 				t.translate(translation_vector)
