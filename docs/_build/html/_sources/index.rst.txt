@@ -16,14 +16,6 @@ ExVol
 
 ``ExVol`` is a Monte Carlo code performing insertions of a bead model into the box filled with other, crowding, bead models, in order to calculate the change in configurational partition function. It is written in ``python 3``.
 
-.. rubric:: Quickstart
-
-To ensure that all ``python`` packages needed by ``ExVol`` are present on your computer you can run
-
-.. code-block:: console
-
-    $ pip3 install -r requirements.txt
-
 .. rubric:: License
 
 Copyright (C) 2022 Tomasz Skóra tskora@ichf.edu.pl
@@ -43,10 +35,20 @@ along with this program.  If not, see `here <https://www.gnu.org/licenses/>`_.
 
 .. rubric:: Author
 
-The following people contributed to the development of ``pyBrown``.
+The following people contributed to the development of ``ExVol``.
 
 - Tomasz Skóra -- **creator, lead developer** (contact: tskora@ichf.edu.pl)
+
+.. warning::
+    The work on ``pyBrown`` is still in progress. Some functionalities may be temporally unavailable.
+
+.. todo::
+    - propagation schemes different than Ermak and Midpoint,
+    - predefined 1-body force and energy,
+    - dihedral bonded interactions
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
+   input

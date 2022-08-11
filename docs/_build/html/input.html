@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Input &mdash; ExVol 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="ExVol" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ExVol
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Input</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#txt-files"><code class="docutils literal notranslate"><span class="pre">.txt</span></code> files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#json-file"><code class="docutils literal notranslate"><span class="pre">.json</span></code> file</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ExVol</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Input</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/input.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="input">
+<h1>Input<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h1>
+<p>Input for <code class="docutils literal notranslate"><span class="pre">ExVol</span></code> consists of three text files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.json</span></code> – providing simulation parameters,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.txt</span></code> – providing configuration of the crpwded box,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.txt</span></code> – providing configuration of the inserted model,</p></li>
+</ul>
+<p>Below we ellaborate on their structure and meaning.</p>
+<div class="section" id="txt-files">
+<h2><code class="docutils literal notranslate"><span class="pre">.txt</span></code> files<a class="headerlink" href="#txt-files" title="Permalink to this headline">¶</a></h2>
+<p>Configuration (<code class="docutils literal notranslate"><span class="pre">.txt</span></code>) files contain the information about the positions and sizes of beads. Each line follows a scheme:</p>
+<p><code class="docutils literal notranslate"><span class="pre">label</span> <span class="pre">x</span> <span class="pre">y</span> <span class="pre">z</span> <span class="pre">a</span></code></p>
+<p>The entries should be replaced with values specific to a given type of bead. Below their meanings are explained:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> – label (name) of the bead (<code class="docutils literal notranslate"><span class="pre">string</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">y</span> <span class="pre">z</span></code> – <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code> cartesian coordinates of the bead center (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> – the radius of the bead (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</div>
+<div class="section" id="json-file">
+<h2><code class="docutils literal notranslate"><span class="pre">.json</span></code> file<a class="headerlink" href="#json-file" title="Permalink to this headline">¶</a></h2>
+<p>Simulation parameters are provided in a standard <a class="reference external" href="https://www.json.org/json-en.html">JSON</a> data format. It consists of multiple lines in a form of <code class="docutils literal notranslate"><span class="pre">keyword:</span> <span class="pre">value</span></code> pairs enclosed by a curly bracket. Some keywords are obligatory, but a majority is not – for them default values will be loaded, if needed. <code class="docutils literal notranslate"><span class="pre">pyBrown</span></code> will inform you if it does not recognize some keywords in input <code class="docutils literal notranslate"><span class="pre">.json</span></code> file.</p>
+<p>The complete list of keywords is provided below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;tracer_filename&quot;:</span> <span class="pre">string</span></code> – the name of the input inserted model configuration <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file (<em>see above</em>), <strong>required</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;crowders_filename&quot;:</span> <span class="pre">string</span></code> – the name of the input crowded box configuration <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file (<em>see above</em>), <strong>required</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;number_of_trials&quot;:</span> <span class="pre">int</span></code> – the total number of insertions, <strong>required</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;box_size&quot;:</span> <span class="pre">float</span></code> – length of the cubic simulation box, <strong>required</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;debug&quot;:</span> <span class="pre">boolean</span></code> – switching on/off the debug printout, default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;verbose&quot;:</span> <span class="pre">boolean</span></code> – switching on/off the verbose printout, default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;disable_progress_bar&quot;:</span> <span class="pre">boolean</span></code> – disabling the progress bar, default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;seed&quot;:</span> <span class="pre">int</span></code> – seed for pseudorandom number generation algorithm, default <code class="docutils literal notranslate"><span class="pre">np.random.randint(2**32</span> <span class="pre">-</span> <span class="pre">1)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;omp_cores&quot;:</span> <span class="pre">int</span></code> – number of cores for parallel computation, default: all available</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="index.html" class="btn btn-neutral float-left" title="ExVol" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Tomasz Skóra.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
