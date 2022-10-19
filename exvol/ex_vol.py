@@ -44,7 +44,17 @@ def initialize_pseudorandom_number_generation(seed = None):
 
 #-------------------------------------------------------------------------------
 
-def estimate_excluded_volume(seed, tracer, crowders, number_of_trials, box_size, disable_progress_bar = False, dimension = 3):
+def rescale_tracer(tracer, scale_tracer):
+
+	for t in tracer:
+		t.coords *= scale_tracer
+		t.r *= scale_tracer
+
+#-------------------------------------------------------------------------------
+
+def estimate_excluded_volume(seed, tracer, crowders, number_of_trials, box_size, scale_tracer, disable_progress_bar = False, dimension = 3):
+
+	if scale_tracer != 1.0: rescale_tracer(tracer, scale_tracer)
 
 	pseudorandom_number_generator = initialize_pseudorandom_number_generation(seed)
 	

@@ -32,7 +32,7 @@ def main(input_filename):
 	
 	pool = Pool(processes=i.input_data["omp_cores"])
 
-	estimate_excluded_volume_partial = partial( estimate_excluded_volume, tracer = tracer, crowders = crowders, number_of_trials = i.input_data["number_of_trials"], box_size = i.input_data["box_size"], disable_progress_bar = i.input_data["disable_progress_bar"] )
+	estimate_excluded_volume_partial = partial( estimate_excluded_volume, tracer = tracer, crowders = crowders, number_of_trials = i.input_data["number_of_trials"], box_size = i.input_data["box_size"], scale_tracer = i.input_data["scale_tracer"], disable_progress_bar = i.input_data["disable_progress_bar"] )
 
 	excluded_volume = pool.map( estimate_excluded_volume_partial, i.input_data["seed"] )
 

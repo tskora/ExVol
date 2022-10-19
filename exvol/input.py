@@ -12,7 +12,7 @@ REQUIRED_KEYWORDS = ["box_size", "number_of_trials", "tracer_filename", "crowder
 
 # here the dict of keywords:default values is provided
 # if given keyword is absent in JSON, it is added with respective default value
-DEFAULTS = {"float_type": 32, "verbose":False, "debug":False, "omp_cores": 0, "seed": None, "disable_progress_bar": False}
+DEFAULTS = {"float_type": 32, "verbose":False, "debug":False, "omp_cores": 0, "seed": None, "disable_progress_bar": False, "scale_tracer": 1.0}
 
 ALL_KEYWORDS = REQUIRED_KEYWORDS + list(DEFAULTS.keys())
 
